@@ -1,0 +1,31 @@
+https://github.com/acdlite/react-fiber-architecture
+
+
+<!-- reconciliation -->
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+first tree => actual browser tree
+
+second tree => dom tree(came from create root)
+
+
+-> reconciliation is the algorithm behind what is popularly understood as the "virtual dom"
+
+-> tree updated using setState method
+
+
+<!-- for improving list performance in "fibre" algorithm -->
+-> Diffing of lists is performed using keys. Keys should be "stable , predictable , and unique"
+
+
+
+<!-- Fiber -->
+
+->  Fibers are a much lower-level abstraction than application developers typically think about.
+
+-> Specifically, we need to be able to
+
+1) pause work and come back to it later.
+2) assign priority to different types of work.
+3) reuse previously completed work.
+4) abort work if it's no longer needed
